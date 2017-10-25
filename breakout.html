@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Breakout | Atari arcade</title>
+
+    <style type="text/css">
+    canvas {
+        border: 1px solid;
+        margin: 0 auto;
+        width: 80px;
+        display: block;
+        margin-top: 50px;
+        background-color:lightslategrey;
+    }
+    </style>
+</head>
+<canvas id="juegoCanvas" height="600px" width="800px"/>
+
+    <script type="text/javascript">
+        var canvas = document.getElementById("juegoCanvas");
+        var ctx = canvas.getContext("2d");
+        var bolaR = 10, x = canvas.width/2, y = canvas.height-30,
+            dx = 3,  dy = -3, pongH = 15, pongW = 80, pongX = (canvas.width - pongW) / 2,
+            teclaDer = false, teclaIzq = false, filaLadrillos = 3, columnaLadrillos = 9,
+            ladrilloW = 75, ladrilloH = 20, ladrilloPadding = 30, ladrilloOffsetTop = 30,
+            ladrilloOffsetLeft = 30;
+
+        var ladrillos = [];
+
+        for (c = 0; c < columnaLadrillos; c++){
+            for (r = 0; r < filaLadrillos; r++){
+                ladrillos.push({
+                    x : (c *(ladrilloW + ladrilloPadding)) + ladrilloOffsetLeft,
+                    y : (r * (ladrilloH + ladrilloPadding)) + ladrilloOffsetTop,
+                    estado : 1;
+                });
+            }
+        }
+
+        function dibujarBolinga() {
+            
+        }    
+    </script>
+
+</body>
+</html>
